@@ -54,6 +54,9 @@
 - (void)retrieveData {
   [_service onAirFrom:@"http://aim.appdata.abc.net.au.edgesuite.net/data/abc/triplej/onair.xml" withHandler: ^(OnAir *newOnAir) {
 
+    if (self == nil)
+      return;
+
     if (_onAir == NULL ||
         _onAir.egpItem.idNumber != newOnAir.egpItem.idNumber ||
         !([_onAir.playingItem isEqual: newOnAir.playingItem])) {
@@ -82,11 +85,11 @@
   PlayoutItem *item = _onAir.playoutItems[indexPath.row];
   PlayoutItemCell *cell;
 
-//  if (item.status == PLAYING) {
+//Small bug here due to KVC - currently fixing...
+//  if (item.status == PLAYING)
 //    cell = (PlayingCell *) [_tableView dequeueReusableCellWithIdentifier: @"playing"];
-//  } else {
+//  else
     cell = (PlayoutItemCell *) [_tableView dequeueReusableCellWithIdentifier: @"playout"];
-  //}
 
   [cell populateWithItem: item];
 
