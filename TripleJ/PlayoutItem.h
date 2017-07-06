@@ -23,7 +23,7 @@ typedef enum {
 @property NSString *duration, *title, *artist, *imageUrl;
 @property PlayoutItemStatus status;
 @property PlayoutItemType type;
-@property NSDictionary *customFields;
+@property NSMutableDictionary *customFields;
 
 - (id) initWithDict: (NSDictionary *) dict;
 - (NSString *) prettyTime;

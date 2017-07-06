@@ -13,7 +13,7 @@
 @property NSInteger idNumber;
 @property NSString *name, *information, *duration, *presenter;
 @property NSDate *time;
-@property NSDictionary *customFields;
+@property NSMutableDictionary *customFields;
 
 - (id) initWithDict: (NSDictionary *) dict;
 - (double) durationValue;

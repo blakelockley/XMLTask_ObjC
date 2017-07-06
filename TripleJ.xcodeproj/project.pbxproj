@@ -19,6 +19,8 @@
 		EFE88A6C1F0DE24A002D05AB /* OnAir.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE88A6B1F0DE24A002D05AB /* OnAir.m */; };
 		EFE88A6F1F0DE2AE002D05AB /* PlayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE88A6E1F0DE2AE002D05AB /* PlayoutItem.m */; };
 		EFE88A721F0DE2C2002D05AB /* EGPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE88A711F0DE2C2002D05AB /* EGPItem.m */; };
+		EFE88A761F0E03D0002D05AB /* OnAirService.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE88A751F0E03D0002D05AB /* OnAirService.m */; };
+		EFE88A791F0E103B002D05AB /* ImageService.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE88A781F0E103B002D05AB /* ImageService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,10 @@
 		EFE88A6E1F0DE2AE002D05AB /* PlayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayoutItem.m; sourceTree = "<group>"; };
 		EFE88A701F0DE2C2002D05AB /* EGPItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGPItem.h; sourceTree = "<group>"; };
 		EFE88A711F0DE2C2002D05AB /* EGPItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGPItem.m; sourceTree = "<group>"; };
+		EFE88A741F0E03D0002D05AB /* OnAirService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnAirService.h; sourceTree = "<group>"; };
+		EFE88A751F0E03D0002D05AB /* OnAirService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnAirService.m; sourceTree = "<group>"; };
+		EFE88A771F0E103B002D05AB /* ImageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageService.h; sourceTree = "<group>"; };
+		EFE88A781F0E103B002D05AB /* ImageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 			children = (
 				EFE88A691F0DE225002D05AB /* Model */,
 				EFE88A5E1F0DCEBF002D05AB /* UI */,
+				EFE88A731F0E03B6002D05AB /* Services */,
 				EFE88A501F0DCDA5002D05AB /* Main.storyboard */,
 				EFE88A531F0DCDA5002D05AB /* Assets.xcassets */,
 				EFE88A551F0DCDA5002D05AB /* LaunchScreen.storyboard */,
@@ -123,6 +130,17 @@
 				EFE88A711F0DE2C2002D05AB /* EGPItem.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		EFE88A731F0E03B6002D05AB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EFE88A771F0E103B002D05AB /* ImageService.h */,
+				EFE88A781F0E103B002D05AB /* ImageService.m */,
+				EFE88A741F0E03D0002D05AB /* OnAirService.h */,
+				EFE88A751F0E03D0002D05AB /* OnAirService.m */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,11 +216,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFE88A671F0DDBF7002D05AB /* PlayingCell.m in Sources */,
+				EFE88A761F0E03D0002D05AB /* OnAirService.m in Sources */,
 				EFE88A721F0DE2C2002D05AB /* EGPItem.m in Sources */,
 				EFE88A641F0DD400002D05AB /* PlayoutItemCell.m in Sources */,
 				EFE88A611F0DD1ED002D05AB /* HeaderCellTableViewCell.m in Sources */,
 				EFE88A4F1F0DCDA5002D05AB /* ViewController.m in Sources */,
 				EFE88A4C1F0DCDA5002D05AB /* AppDelegate.m in Sources */,
+				EFE88A791F0E103B002D05AB /* ImageService.m in Sources */,
 				EFE88A6F1F0DE2AE002D05AB /* PlayoutItem.m in Sources */,
 				EFE88A6C1F0DE24A002D05AB /* OnAir.m in Sources */,
 				EFE88A491F0DCDA5002D05AB /* main.m in Sources */,
