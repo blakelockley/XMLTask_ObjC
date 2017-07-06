@@ -13,6 +13,9 @@
 		EFE88A521F0DCDA5002D05AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE88A501F0DCDA5002D05AB /* Main.storyboard */; };
 		EFE88A541F0DCDA5002D05AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE88A531F0DCDA5002D05AB /* Assets.xcassets */; };
 		EFE88A571F0DCDA5002D05AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE88A551F0DCDA5002D05AB /* LaunchScreen.storyboard */; };
+		EFE88A611F0DD1ED002D05AB /* HeaderCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE88A601F0DD1ED002D05AB /* HeaderCellTableViewCell.m */; };
+		EFE88A641F0DD400002D05AB /* PlayoutItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE88A631F0DD400002D05AB /* PlayoutItemCell.m */; };
+		EFE88A671F0DDBF7002D05AB /* PlayingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE88A661F0DDBF7002D05AB /* PlayingCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		EFE88A531F0DCDA5002D05AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFE88A561F0DCDA5002D05AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFE88A581F0DCDA5002D05AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFE88A5F1F0DD1ED002D05AB /* HeaderCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderCellTableViewCell.h; sourceTree = "<group>"; };
+		EFE88A601F0DD1ED002D05AB /* HeaderCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderCellTableViewCell.m; sourceTree = "<group>"; };
+		EFE88A621F0DD400002D05AB /* PlayoutItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayoutItemCell.h; sourceTree = "<group>"; };
+		EFE88A631F0DD400002D05AB /* PlayoutItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayoutItemCell.m; sourceTree = "<group>"; };
+		EFE88A651F0DDBF7002D05AB /* PlayingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCell.h; sourceTree = "<group>"; };
+		EFE88A661F0DDBF7002D05AB /* PlayingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +67,7 @@
 		EFE88A461F0DCDA5002D05AB /* TripleJ */ = {
 			isa = PBXGroup;
 			children = (
-				EFE88A4A1F0DCDA5002D05AB /* AppDelegate.h */,
-				EFE88A4B1F0DCDA5002D05AB /* AppDelegate.m */,
-				EFE88A4D1F0DCDA5002D05AB /* ViewController.h */,
-				EFE88A4E1F0DCDA5002D05AB /* ViewController.m */,
+				EFE88A5E1F0DCEBF002D05AB /* UI */,
 				EFE88A501F0DCDA5002D05AB /* Main.storyboard */,
 				EFE88A531F0DCDA5002D05AB /* Assets.xcassets */,
 				EFE88A551F0DCDA5002D05AB /* LaunchScreen.storyboard */,
@@ -77,6 +83,23 @@
 				EFE88A481F0DCDA5002D05AB /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFE88A5E1F0DCEBF002D05AB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EFE88A4A1F0DCDA5002D05AB /* AppDelegate.h */,
+				EFE88A4B1F0DCDA5002D05AB /* AppDelegate.m */,
+				EFE88A4D1F0DCDA5002D05AB /* ViewController.h */,
+				EFE88A4E1F0DCDA5002D05AB /* ViewController.m */,
+				EFE88A5F1F0DD1ED002D05AB /* HeaderCellTableViewCell.h */,
+				EFE88A601F0DD1ED002D05AB /* HeaderCellTableViewCell.m */,
+				EFE88A621F0DD400002D05AB /* PlayoutItemCell.h */,
+				EFE88A631F0DD400002D05AB /* PlayoutItemCell.m */,
+				EFE88A651F0DDBF7002D05AB /* PlayingCell.h */,
+				EFE88A661F0DDBF7002D05AB /* PlayingCell.m */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +174,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFE88A671F0DDBF7002D05AB /* PlayingCell.m in Sources */,
+				EFE88A641F0DD400002D05AB /* PlayoutItemCell.m in Sources */,
+				EFE88A611F0DD1ED002D05AB /* HeaderCellTableViewCell.m in Sources */,
 				EFE88A4F1F0DCDA5002D05AB /* ViewController.m in Sources */,
 				EFE88A4C1F0DCDA5002D05AB /* AppDelegate.m in Sources */,
 				EFE88A491F0DCDA5002D05AB /* main.m in Sources */,

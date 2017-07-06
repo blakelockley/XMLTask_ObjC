@@ -26,4 +26,16 @@
 }
 
 
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  return 0;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  return [[UITableViewCell alloc] init];
+}
+
 @end
