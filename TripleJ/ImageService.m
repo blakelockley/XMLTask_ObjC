@@ -25,7 +25,7 @@
   return self;
 }
 
-- (void) retrieveImageForUrl: (NSString *) url withHandler: (void (UIImage *)) handler {
+- (void) retrieveImageForUrl: (NSString *) url withHandler: (void (^)(UIImage *)) handler {
   if (_dataTask != NULL)
   	[_dataTask cancel];
 

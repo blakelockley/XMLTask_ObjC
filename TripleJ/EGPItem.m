@@ -7,6 +7,7 @@
 //
 
 #import "EGPItem.h"
+#import "OnAirService.h"
 
 @implementation EGPItem
 
@@ -15,9 +16,11 @@
     _idNumber = [(NSString *) dict[@"id"] integerValue];
     _name = (NSString *) dict[@"name"];
     _information = (NSString *) dict[@"description"];
-    _time = [[NSDate alloc] init]; //TODO: use formatter in OnAirService
+    _time = [[OnAirService dateFormatter] dateFromString:(NSString *) dict[@"time"]];
     _duration = (NSString *) dict[@"duration"];
     _presenter = (NSString *) dict[@"presenter"];
+
+    _customFields = [[NSMutableDictionary alloc] init];
   }
   return self;
 }

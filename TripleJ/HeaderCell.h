@@ -1,5 +1,5 @@
 //
-//  HeaderCellTableViewCell.h
+//  HeaderCell.h
 //  TripleJ
 //
 //  Created by Blake Lockley on 6/7/17.
@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EGPItem.h"
 
-@interface HeaderCellTableViewCell : UITableViewCell
+@interface HeaderCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *information;
@@ -16,5 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIView *fullBar;
 @property (weak, nonatomic) IBOutlet UIView *progressBar;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *progressTrailing;
+
+- (void) populateWithItem: (EGPItem *) item;
+- (void) updateProgress;
 
 @end

@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PlayoutItem.h"
 
 @interface PlayoutItemCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UIImageView *albumArt;
 @property (weak, nonatomic) IBOutlet UILabel *trackName;
 @property (weak, nonatomic) IBOutlet UILabel *artistName;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+
+- (void) populateWithItem: (PlayoutItem *) item;
 
 @end

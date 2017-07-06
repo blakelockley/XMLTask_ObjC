@@ -24,6 +24,12 @@
 
 @implementation OnAirService
 
++ (NSDateFormatter *) dateFormatter {
+  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+  formatter.dateFormat = @"YYYY-MM-dd'T'HH:mm:ssZZZ";
+  return formatter;
+}
+
 - (id) init {
   if (self = [super init]) {
     _defaultSession = [NSURLSession sessionWithConfiguration:
@@ -75,7 +81,7 @@
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary<NSString *,NSString *> *)attributeDict {
 
-  if ([elementName isEqualToString: @"egpItem"]) {
+  if ([elementName isEqualToString: @"epgItem"]) {
     _egpItem = [[EGPItem alloc] initWithDict: attributeDict];
     _parsingEGPFields = YES;
   } else if ([elementName isEqualToString: @"playoutData"]) {
@@ -95,10 +101,11 @@
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
 
-  if ([elementName isEqualToString: @"egpItem"]) {
+  if ([elementName isEqualToString: @"epgItem"]) {
     _parsingEGPFields = NO;
   } else if ([elementName isEqualToString: @"playoutItem"]) {
-    [_playoutItems addObject: _currentPlayOutItem];
+    if (_currentPlayOutItem != nil)
+    	[_playoutItems addObject: _currentPlayOutItem];
   }
 }
 

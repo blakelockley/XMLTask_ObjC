@@ -13,6 +13,7 @@
 
 @property BOOL parsing;
 
++ (NSDateFormatter *) dateFormatter;
 - (void) onAirFrom: (NSString *) url withHandler: (void (^__strong) (OnAir *onAir)) handler;
 
 @end

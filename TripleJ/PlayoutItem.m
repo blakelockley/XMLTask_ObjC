@@ -7,6 +7,7 @@
 //
 
 #import "PlayoutItem.h"
+#import "OnAirService.h"
 
 @interface PlayoutItem ()
 
@@ -18,7 +19,7 @@
 
 - (id)initWithDict:(NSDictionary *)dict {
   if ( self = [super init] ) {
-    _time = [[NSDate alloc] init]; //TODO: use formatter in OnAirService
+    _time = [[OnAirService dateFormatter] dateFromString:(NSString *) dict[@"time"]];
     _duration = (NSString *) dict[@"duration"];
     _title = (NSString *) dict[@"title"];
     _artist = (NSString *) dict[@"artist"];
@@ -26,21 +27,19 @@
 
     NSString *status, *type;
     status = (NSString *) dict[@"status"];
-    if ([status isEqualToString: @"PLAYING"])
+    if ([status isEqualToString: @"playing"])
       _status = PLAYING;
-    else if ([status isEqualToString: @"HISTORY"])
+    else if ([status isEqualToString: @"history"])
       _status = HISTORY;
-    else
-      return nil;
 
     type = (NSString *) dict[@"type"];
-    if ([status isEqualToString: @"SONG"])
+    if ([status isEqualToString: @"song"])
       _type = SONG;
-    else
-      return nil;
 
     _dateFormatter = [[NSDateFormatter alloc ] init];
     _dateFormatter.dateFormat = @"h:mma";
+
+    _customFields = [[NSMutableDictionary alloc] init];
   }
   return self;
 }

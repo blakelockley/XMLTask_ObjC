@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" rowHeight="80" id="kQL-2v-uhS" customClass="HeaderCellTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" rowHeight="80" id="kQL-2v-uhS" customClass="HeaderCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kQL-2v-uhS" id="5aG-hx-JJT">
@@ -150,7 +150,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="activityIndicator" destination="qs8-JS-LJd" id="frZ-zi-IVy"/>
+                                            <outlet property="activityIndicator" destination="qs8-JS-LJd" id="Lij-gg-8HY"/>
                                             <outlet property="albumArt" destination="7uf-0Q-JED" id="xNs-gG-30V"/>
                                             <outlet property="artistName" destination="Nee-f5-6CI" id="FMK-Al-3gP"/>
                                             <outlet property="timeLabel" destination="Upy-lv-Ub6" id="tzN-xb-pSY"/>
@@ -165,13 +165,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OS1-o8-GVZ">
-                                                    <rect key="frame" x="8" y="8" width="96" height="96"/>
+                                                    <rect key="frame" x="8" y="8" width="95" height="95"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="OS1-o8-GVZ" secondAttribute="height" multiplier="1:1" id="3PT-Ou-S7a"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBQ-6X-1EB">
-                                                    <rect key="frame" x="112" y="8" width="255" height="21"/>
+                                                    <rect key="frame" x="111" y="8" width="256" height="21"/>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -181,19 +181,19 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </activityIndicatorView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYC-ZN-p7o">
-                                                    <rect key="frame" x="112" y="29" width="38" height="18"/>
+                                                    <rect key="frame" x="111" y="29" width="38" height="18"/>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbI-hb-ePf">
-                                                    <rect key="frame" x="112" y="86" width="86" height="18"/>
+                                                    <rect key="frame" x="111" y="85" width="86" height="18"/>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="00:20:01" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bt8-MR-hFa">
-                                                    <rect key="frame" x="205" y="86" width="162" height="18"/>
+                                                    <rect key="frame" x="205" y="85" width="162" height="18"/>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -216,7 +216,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="activityIndicator" destination="gVx-R2-hBQ" id="MxS-5z-TKa"/>
+                                            <outlet property="activityIndicator" destination="gVx-R2-hBQ" id="FKn-Z5-J6w"/>
                                             <outlet property="albumArt" destination="OS1-o8-GVZ" id="Zaw-TL-uwv"/>
                                             <outlet property="artistName" destination="GYC-ZN-p7o" id="64B-Db-l7h"/>
                                             <outlet property="durationLabel" destination="bt8-MR-hFa" id="z3u-eu-Gf1"/>

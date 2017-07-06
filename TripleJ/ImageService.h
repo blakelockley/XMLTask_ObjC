@@ -10,6 +10,6 @@
 
 @interface ImageService : NSObject
 
-- (void) retrieveImageForUrl: (NSString *) url withHandler: (void (UIImage *)) handler;
+- (void) retrieveImageForUrl: (NSString *) url withHandler: (void (^) (UIImage *)) handler;
 
 @end

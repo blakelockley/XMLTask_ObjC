@@ -7,18 +7,43 @@
 //
 
 #import "PlayoutItemCell.h"
+#import "ImageService.h"
+
+@interface PlayoutItemCell ()
+
+@property PlayoutItem *item;
+@property ImageService *imageService;
+
+@end
 
 @implementation PlayoutItemCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+  if ( self = [super initWithCoder: aDecoder]) {
+    _imageService = [[ImageService alloc] init];
+  }
+  return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+- (void)populateWithItem: (PlayoutItem *) item {
+  _item = item;
+  _trackName.text = item.title;
+  _artistName.text = item.artist;
 
-    // Configure the view for the selected state
+  if (_timeLabel != NULL)
+    _timeLabel.text = [item prettyTime];
+
+  [_albumArt setHidden: YES];
+  [_activityIndicator startAnimating];
+
+  [_imageService retrieveImageForUrl: item.imageUrl withHandler: ^(UIImage *image){
+    [[NSOperationQueue mainQueue] addOperationWithBlock: ^(void){
+      [_albumArt setHidden: NO];
+      [_albumArt setImage: image];
+      [_activityIndicator stopAnimating];
+    }];
+  }];
 }
+
 
 @end
